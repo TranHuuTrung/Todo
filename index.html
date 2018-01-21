@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/css/homescreen.css">
+    <title>Todo JS</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="row header">
+            <div class="col-md-3 logo">
+                <a href="#">Todo Plan</a>
+            </div>
+            <div class="col-md-3 info-header">      
+                <p><img src="images/admin.png" alt="">Hi, Trần Hữu Trung!<i class="fa fa-sign-out logout"></i></p>
+            </div>
+        </header>
+        <div class="row content">
+            <div class="col-md-2 navigation-choose">
+                    <div class="info-user">
+                        <img class="avatar" src="images/admin.png" alt="">
+                        <p>Trần Hữu Trung</p>
+                        <span><i class="fa fa-mortar-board"></i>Education: </span>Bach Khoa University <br/>
+                        <span><i class="fa fa-map-marker"></i>Location :</span> Da Nang
+                    </div> 
+                    <p style="font-size: 25px;">Actions</p>
+                    <div class="list-group list-group-flush">
+                        <a class="list-group-item" href="#"><i class="fa fa-address-book-o"></i> Register</a>
+                        <a class="list-group-item" href="#"><i class="fa fa-sign-in"></i> Login</a>
+                        <a class="list-group-item" href="#"><i class="fa fa-sign-out"></i> Logout</a>
+                        <a class="list-group-item" href="#"><i class="fa fa-pencil"></i> Change Password</a>
+                        <a class="list-group-item" href="#"><i class="fa fa-pencil-square-o"></i> Edit profile</a>
+                    </div>
+            </div>
+            <div class="col-md-5">
+                <div class="todolist not-done">
+                    <h1>Todos</h1>
+                    <input type="text" class="form-control add-todo" placeholder="Add todo">
+                    <button id="checkAll" class="btn btn-success">Mark all as done</button> 
+                    <hr>
+                    <ul id="sortable" class="list-unstyled ui-sortable">
+                        <li class="ui-state-default">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Take out the trash</label>
+                            </div>
+                        </li>
+                        <li class="ui-state-default">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Buy bread</label>
+                            </div>
+                        </li>
+                        <li class="ui-state-default">
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Teach penguins to fly</label>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="todo-footer">
+                        <strong><span class="count-todos">3</span></strong> Items Left
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="todolist">
+                 <h1>Already Done</h1>
+                    <ul id="done-items" class="list-unstyled">
+                        <li>Some item <button class="remove-item btn btn-default btn-xs pull-right fa fa-close"></button></li>                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Jquery bootstrap template depend on it -->
+     <script src="style/js/jquery-3.2.1.min.js"></script>
+     <script src="style/js/bootstrap.min.js"></script>
+     <script src="style/js/script.js"></script>
+     <script src="style/js/todo.js"></script>
+     <script src="style/js/ajax.js"></script>
+</body>
+</html>
